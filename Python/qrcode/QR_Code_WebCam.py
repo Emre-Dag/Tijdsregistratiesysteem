@@ -1,4 +1,4 @@
-#https://www.geeksforgeeks.org/webcam-qr-code-scanner-using-opencv/
+#bronnen: https://www.geeksforgeeks.org/webcam-qr-code-scanner-using-opencv/
 
 import cv2
 import webbrowser
@@ -18,7 +18,8 @@ while(cam.isOpened()):
     data, bbox, _ = detector.detectAndDecode(frame)
     # check if there is a QRCode in the image
     if data:
-       webbrowser.open(str(data))
+       print(bbox,data)
+       #webbrowser.open(str(data))
        time.sleep(5)
        #break
     cv2.imshow('QR CODE scanner', frame)
