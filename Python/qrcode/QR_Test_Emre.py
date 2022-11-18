@@ -2,28 +2,29 @@
 
 import cv2
 import webbrowser
+from picamera import PiCamera
 # Create a VideoCapture object and read from input file
 # If the input is the camera, pass 0 instead of the video file name
-cam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+cam = PiCamera()
 detector = cv2.QRCodeDetector()
 # Check if camera opened successfully
-if (cam.isOpened() == False):
+if (cam.start_preview() == False):
   print("Error opening video stream or file")
 
 # Read the video
-while(cam.isOpened()):
+while(cam.start_preview()):
     check, frame = cam.read()
     # detect and decode
     data, bbox, _ = detector.detectAndDecode(frame)
     # check if there is a QRCode in the image
     if data:
        a=data
+       b=webbrowser.open(str(a))
        break
     cv2.imshow('QRCODEscanner', frame)
     
     if cv2.waitKey(1) == ord("q"):
         break
-b=webbrowser.open(str(a))
     
 cam.release()
 cv2.destroyAllWindows()
