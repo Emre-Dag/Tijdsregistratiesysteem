@@ -11,14 +11,6 @@ After initialization, try waving various 13.56MHz RFID cards over it!
 import board
 import busio
 from digitalio import DigitalInOut
-import time
-
-import RPi.GPIO as GPIO
-
-# to use Raspberry Pi board pin numbers
-GPIO.setmode(GPIO.BCM)
-#GPIO.setup(17, GPIO.IN)
-GPIO.setup(4, GPIO.OUT)
 
 #
 # NOTE: pick the import that matches the interface being used
@@ -61,12 +53,8 @@ print("Waiting for RFID/NFC card...")
 while True:
     # Check if a card is available to read
     uid = pn532.read_passive_target(timeout=0.5)
-    """print(".", end="")"""
+    print(".", end="\n")
     # Try again if no card is available.
     if uid is None:
         continue
     print("Found card with UID:", [hex(i) for i in uid])
-    #input_value = GPIO.input(17)
-    GPIO.output(4, GPIO.HIGH)
-    time.sleep(1)
-    GPIO.output(4, GPIO.LOW)
