@@ -1,10 +1,13 @@
 import cv2
 import picamera
 import picamera.array
+import webbrowser
+import time
 
 detector = cv2.QRCodeDetector()
 
 with picamera.PiCamera() as camera:
+    camera.resolution = (640,480)
     with picamera.array.PiRGBArray(camera) as stream:
         while True:
             camera.capture(stream, format='bgr')
@@ -16,7 +19,6 @@ with picamera.PiCamera() as camera:
             if data:
                 webbrowser.open(str(data))
                 time.sleep(5)
-                break
             cv2.imshow('frame', gray)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
