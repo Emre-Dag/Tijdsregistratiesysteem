@@ -12,14 +12,22 @@ import board
 import busio
 from digitalio import DigitalInOut
 import time
-
 import RPi.GPIO as GPIO
+from adafruit_pn532.spi import PN532_SPI
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="db4free.net",
+  user="kmpspxl",
+  password="kompaspxl",
+  database="kmpspxl"
+)
+
+mycursor = mydb.cursor()
 
 # to use Raspberry Pi board pin numbers
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(4, GPIO.OUT)
-
-from adafruit_pn532.spi import PN532_SPI
 
 # SPI connection:
 spi = busio.SPI(board.SCK, board.MOSI, board.MISO)
@@ -39,6 +47,8 @@ while True:
     # Try again if no card is available.
     if uid is not None:
         print("Found card with UID:", [hex(i) for i in uid])
+        mycursor.execute("INSERT INTO kompas_studenten (NFC_ID ) VALUES (50)")
+        mydb.commit()
         GPIO.output(4, GPIO.HIGH)
         time.sleep(1)
         GPIO.output(4, GPIO.LOW)
