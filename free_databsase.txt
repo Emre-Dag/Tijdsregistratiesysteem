@@ -1,0 +1,5 @@
+MySQL database name: kmpspxl
+MySQL username: kmpspxl
+MySQL user password: kompaspxl
+
+host="db4free.net"

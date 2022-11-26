@@ -12,45 +12,27 @@ import board
 import busio
 from digitalio import DigitalInOut
 import time
-
 import RPi.GPIO as GPIO
+from adafruit_pn532.spi import PN532_SPI
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="db4free.net",
+  user="kmpspxl",
+  password="kompaspxl",
+  database="kmpspxl"
+)
+
+mycursor = mydb.cursor()
 
 # to use Raspberry Pi board pin numbers
 GPIO.setmode(GPIO.BCM)
-#GPIO.setup(17, GPIO.IN)
 GPIO.setup(4, GPIO.OUT)
-
-#
-# NOTE: pick the import that matches the interface being used
-#
-# from adafruit_pn532.i2c import PN532_I2C
-
-from adafruit_pn532.spi import PN532_SPI
-# from adafruit_pn532.uart import PN532_UART
-
-# I2C connection:
-# i2c = busio.I2C(board.SCL, board.SDA)
-
-# Non-hardware
-# pn532 = PN532_I2C(i2c, debug=False)
-
-# With I2C, we recommend connecting RSTPD_N (reset) to a digital pin for manual
-# harware reset
-#reset_pin = DigitalInOut(board.D6)
-# On Raspberry Pi, you must also connect a pin to P32 "H_Request" for hardware
-# wakeup! this means we don't need to do the I2C clock-stretch thing
-#req_pin = DigitalInOut(board.D12)
-#pn532 = PN532_I2C(i2c, debug=False, reset=reset_pin, req=req_pin)
 
 # SPI connection:
 spi = busio.SPI(board.SCK, board.MOSI, board.MISO)
 cs_pin = DigitalInOut(board.D5)
 pn532 = PN532_SPI(spi, cs_pin, debug=False)
-
-# UART connection
-# uart = busio.UART(board.TX, board.RX, baudrate=115200, timeout=100)
-# pn532 = PN532_UART(uart, debug=False)
-
 ic, ver, rev, support = pn532.firmware_version
 print("Found PN532 with firmware version: {0}.{1}".format(ver, rev))
 
@@ -60,13 +42,13 @@ pn532.SAM_configuration()
 print("Waiting for RFID/NFC card...")
 while True:
     # Check if a card is available to read
-    uid = pn532.read_passive_target(timeout=0.5)
+    uid = pn532.read_passive_target(timeout=1)
     """print(".", end="")"""
     # Try again if no card is available.
-    if uid is None:
-        continue
-    print("Found card with UID:", [hex(i) for i in uid])
-    #input_value = GPIO.input(17)
-    GPIO.output(4, GPIO.HIGH)
-    time.sleep(1)
-    GPIO.output(4, GPIO.LOW)
+    if uid is not None:
+        print("Found card with UID:", [hex(i) for i in uid])
+        mycursor.execute("INSERT INTO kompas_studenten (NFC_ID ) VALUES (50)")
+        mydb.commit()
+        GPIO.output(4, GPIO.HIGH)
+        time.sleep(1)
+        GPIO.output(4, GPIO.LOW)
