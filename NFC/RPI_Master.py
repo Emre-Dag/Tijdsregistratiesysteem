@@ -47,8 +47,13 @@ while True:
     # Try again if no card is available.
     if uid is not None:
         print("Found card with UID:", [hex(i) for i in uid])
-        mycursor.execute("INSERT INTO kompas_studenten (NFC_ID ) VALUES (50)")
-        mydb.commit()
+        id_dec = str(uid).strip("\,[,],(,),'")
+        print(id_dec)
+        """dec = int(uid, base=16)
+        print(dec)"""
+        """mycursor.execute("INSERT INTO studenten (NFC_ID) VALUES ({})".format(uid))
+        mydb.commit()"""
+        print("data verstuurd!!!!!!!!!!!")
         GPIO.output(4, GPIO.HIGH)
         time.sleep(1)
         GPIO.output(4, GPIO.LOW)
