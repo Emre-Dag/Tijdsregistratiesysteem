@@ -1,0 +1,37 @@
+.header 
+{
+	background-color: darkgray;
+	padding: 20px 20px;
+	text-align: center;
+	color: black;
+}
+.body 
+{
+	background-color: #E8E8E8;
+	background-repeat: no-repeat;
+	color:black
+}
+#clock 
+{
+	color: black;
+	font-size: 20px;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  padding: 20px 20px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+  }
