@@ -1,19 +1,15 @@
-import MySQLdb
+import mysql.connector
 
-db = MySQLdb.connect(host="localhost",    # your host, usually localhost
-                     user="john",         # your username
-                     passwd="megajonhy",  # your password
-                     db="jonhydb")        # name of the data base
+mydb = mysql.connector.connect(host="db4free.net",    # your host, usually localhost
+                                         user="kmpspxl",         # your username
+                                         passwd="kompaspxl",  # your password
+                                         db="kmpspxl") 
 
-# you must create a Cursor object. It will let
-#  you execute all the queries you need
-cur = db.cursor()
+mycursor = mydb.cursor()
 
-# Use all the SQL you like
-cur.execute("SELECT * FROM YOUR_TABLE_NAME")
+mycursor.execute("SELECT * FROM kompas_studenten")
 
-# print all the first cell of all the rows
-for row in cur.fetchall():
-    print row[0]
+myresult = mycursor.fetchall()
 
-db.close()
+for x in myresult:
+  print(x)
