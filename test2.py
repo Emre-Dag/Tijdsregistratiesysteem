@@ -33,7 +33,11 @@ print("Found PN532 with firmware version: {0}.{1}".format(ver, rev))
 CARD_KEY = [0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF]
 
 # Prefix, aka header from the card
+<<<<<<< Updated upstream
 #HEADER = b'BG'
+=======
+HEADER = b'BG'
+>>>>>>> Stashed changes
 
 # Create and initialize an instance of the PN532 class.
 pn532.SAM_configuration()
@@ -95,12 +99,20 @@ if not pn532.mifare_classic_authenticate_block(uid, 4, MIFARE_CMD_AUTH_B,
 # - 6 bytes 2-7 store the user data, for example user ID
 data = bytearray(16)
 # Add header
+<<<<<<< Updated upstream
 #data[0:2] = HEADER
+=======
+data[0:2] = HEADER
+>>>>>>> Stashed changes
 # Convert int to hex string with up to 6 digits
 value = format(block_choice, 'x')
 while (6 > len(value)):
     value = '0' + value
+<<<<<<< Updated upstream
 
+=======
+data[2:8] = bytearray.fromhex(value)
+>>>>>>> Stashed changes
 # Finally write the card.
 if not pn532.mifare_classic_write_block(4, data):
     print('Error! Failed to write to the card.')
