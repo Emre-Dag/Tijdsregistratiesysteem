@@ -21,6 +21,7 @@ from digitalio import DigitalInOut
 # NOTE: pick the import that matches the interface being used
 
 from adafruit_pn532.spi import PN532_SPI
+from ast import literal_eval
 
 
 
@@ -72,11 +73,10 @@ if not authenticated:
 data = bytearray(16)
 data[0:16] = b"\x68\x65\x6C\x6C\x6F\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
 
-
 # Write 16 byte block.
 pn532.mifare_classic_write_block(4, data)
 # Read block #6
 print(
     "Wrote to block 4, now trying to read that data:",
-    [hex(x) for x in pn532.mifare_classic_read_block(4)],
+    [ literal_eval(hex(x) for x in pn532.mifare_classic_read_block(4))],
 )
