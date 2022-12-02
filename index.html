@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IoT Taak </title>
+	
+	<link rel="stylesheet" href="tijdsregistratiesysteem.css">
+	<link rel="icon" href="Kompas_Logo.png">
+	<meta charset="utf-8">
+</head>
+<body class="body" ></body>
+<div class="header">
+	<h1>Tijdsregeling</h1>
+	<img class="topleft" src="Kompas_Logo.png" alt="Kompas_Logo">
+	<div class="topright" id="clock"></div>
+</div>
+<br>
+<div id="tabel" ></div>
+	<div class="Tableborder1">
+			<label for="Date">Date:</label>
+			<input type="Date" id="Datum" name="Datum">
+			<br>
+			<label for="MinTime">Min time:</label>
+			<input type="time" id="MinTime" name="MinTime">
+			<br>
+			<label for="MaxTime">Max time:</label>
+			<input type="time" id="MaxTime" name="MaxTime">
+			<br>
+			<input type="submit"  onClick="PrintTabel()">
+		<br>
+	</div>
+<br>
+	<script src="tijdsregistratiesysteem.js"></script>
+</body>	
+
+</html>

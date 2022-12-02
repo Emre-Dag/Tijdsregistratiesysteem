@@ -1,3 +1,7 @@
+function start(){
+  PrintTabel();
+}
+
 function currentTime() 
 {
   var date = new Date(); /* creating object of Date class */
@@ -19,4 +23,16 @@ function updateTime(k)
   else {
 	return k;
   }
+}
+currentTime();
+
+function PrintTabel()
+{
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() 
+  {
+		document.getElementById("tabel").innerHTML = this.responseText;
+	};
+	xmlhttp.open("GET","DatumFilter.php?MinTime="+document.getElementById("MinTime").value+"&MaxTime="+document.getElementById("MaxTime").value+"&Datum="+document.getElementById("Datum").value,true);
+	xmlhttp.send();
 }

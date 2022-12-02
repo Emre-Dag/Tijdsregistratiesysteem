@@ -35,3 +35,10 @@
     right: 16px;
     font-size: 18px;
   }
+  .topleft {
+    position: absolute;
+    height:8%;
+    top: 30px;
+    left: 16px;
+    font-size: 18px;
+  }
