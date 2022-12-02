@@ -15,6 +15,7 @@ import time
 import RPi.GPIO as GPIO
 from adafruit_pn532.spi import PN532_SPI
 import mysql.connector
+import re
 
 mydb = mysql.connector.connect(
   host="db4free.net",
@@ -47,8 +48,25 @@ while True:
     # Try again if no card is available.
     if uid is not None:
         print("Found card with UID:", [hex(i) for i in uid])
-        mycursor.execute("INSERT INTO kompas_studenten (NFC_ID ) VALUES (50)")
+        id_dec = str(uid).strip("\,[,],(,),'")
+        print(id_dec)
+        
+        mylist = []
+        for i in uid:
+          print(i)
+          d = int(str(i), base=16)
+          print(d)
+          mylist.append(d)
+          output_id = str(mylist).strip("[,]")
+          s=re.sub(", ","",output_id)
+
+        out_int = int(s)
+
+        print(mylist)
+        print(out_int)
+        mycursor.execute("INSERT INTO studenten (NFC_ID) VALUES ({})".format(out_int))
         mydb.commit()
+        print("data verstuurd!!!!!!!!!!!")
         GPIO.output(4, GPIO.HIGH)
         time.sleep(1)
         GPIO.output(4, GPIO.LOW)
