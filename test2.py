@@ -8,6 +8,11 @@ import board
 import busio
 from digitalio import DigitalInOut
 from adafruit_pn532.adafruit_pn532 import MIFARE_CMD_AUTH_B
+
+try:
+    input = raw_input
+except NameError:
+    pass
 #
 # NOTE: pick the import that matches the interface being used
 #

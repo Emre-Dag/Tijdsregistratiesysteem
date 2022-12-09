@@ -72,11 +72,15 @@ if not authenticated:
 # Set 16 bytes of block to 0xFEEDBEEF
 data = bytearray(16)
 data[0:16] = b"\x68\x65\x6C\x6C\x6F\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
-
+value = format(block_choice, 'x')
+while (6 > len(value)):
+    value = '0' + value
+data[2:8] = value
 # Write 16 byte block.
 pn532.mifare_classic_write_block(4, data)
 # Read block #6
 print(
     "Wrote to block 4, now trying to read that data:",
     [ literal_eval(hex(x) for x in pn532.mifare_classic_read_block(4))],
+    
 )
