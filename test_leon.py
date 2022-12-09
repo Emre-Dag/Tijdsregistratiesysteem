@@ -3,39 +3,35 @@
 import binascii
 import sys
 import struct
-
 import board
 import busio
 from digitalio import DigitalInOut
-from adafruit_pn532.adafruit_pn532 import MIFARE_CMD_AUTH_B
-#
-# NOTE: pick the import that matches the interface being used
-#
-# from adafruit_pn532.i2c import PN532_I2C
+import Adafruit_PN532 as PN532
 from adafruit_pn532.spi import PN532_SPI
-
 
 # Hack to make code compatible with both Python 2 and 3 (since 3 moved
 # raw_input from a builtin to a different function, ugh).
-
+try:
+    input = raw_input
+except NameError:
+    pass
 
 # PN532 configuration for a Raspberry Pi GPIO:
 
-# SPI connection:
-spi = busio.SPI(board.SCK, board.MOSI, board.MISO)
-cs_pin = DigitalInOut(board.D5)
-pn532 = PN532_SPI(spi, cs_pin, debug=False)
+
+
 # Configure the key to use for writing to the MiFare card.  You probably don't
 # need to change this from the default below unless you know your card has a
 # different key associated with it.
-ic, ver, rev, support = pn532.firmware_version
-print("Found PN532 with firmware version: {0}.{1}".format(ver, rev))
 CARD_KEY = [0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF]
 
 # Prefix, aka header from the card
-#HEADER = b'BG'
+HEADER = b'BG'
 
-# Create and initialize an instance of the PN532 class.
+spi = busio.SPI(board.SCK, board.MOSI, board.MISO)
+cs_pin = DigitalInOut(board.D5)
+pn532 = PN532.PN532(spi, cs_pin, debug=False)
+pn532.begin()
 pn532.SAM_configuration()
 
 # Step 1, wait for card to be present.
@@ -85,7 +81,7 @@ print('Writing card (DO NOT REMOVE CARD FROM PN532)...')
 
 # Write the card!
 # First authenticate block 4.
-if not pn532.mifare_classic_authenticate_block(uid, 4, MIFARE_CMD_AUTH_B,
+if not pn532.mifare_classic_authenticate_block(uid, 4, PN532.MIFARE_CMD_AUTH_B,
                                                CARD_KEY):
     print('Error! Failed to authenticate block 4 with the card.')
     sys.exit(-1)
@@ -95,17 +91,14 @@ if not pn532.mifare_classic_authenticate_block(uid, 4, MIFARE_CMD_AUTH_B,
 # - 6 bytes 2-7 store the user data, for example user ID
 data = bytearray(16)
 # Add header
-#data[0:2] = HEADER
+data[0:2] = HEADER
 # Convert int to hex string with up to 6 digits
 value = format(block_choice, 'x')
 while (6 > len(value)):
     value = '0' + value
-
-data[2:8] = bytearray.fromhex(value)
+data[2:8] = value
 # Finally write the card.
 if not pn532.mifare_classic_write_block(4, data):
     print('Error! Failed to write to the card.')
     sys.exit(-1)
 print('Wrote card successfully! You may now remove the card from the PN532.')
-print ("data: ", data)
-print ("bbb ddrn",block_choice)
