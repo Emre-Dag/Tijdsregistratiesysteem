@@ -16,19 +16,15 @@
     if($_GET['Datum']==true&&$_GET['MinTime']==true&&$_GET['MaxTime']==true)
     {
         $MinDate = date("Y-m-d H:i:s", strtotime($_GET['Datum']." ".$_GET['MinTime'].":00"));
-        echo $MinDate." ";
         $MaxDate = date("Y-m-d H:i:s",strtotime($_GET['Datum']." ".$_GET['MaxTime'].":00"));
-        echo $MaxDate." ";
     }
     elseif($_GET['Datum']==true&&$_GET['MinTime']==true&&$_GET['MaxTime']==false)
     {
         $MinDate = date("Y-m-d H:i:s",strtotime($_GET['Datum']." ".$_GET['MinTime'].":00"));
-        echo $MinDate." ";
     }
     elseif($_GET['Datum']==true&&$_GET['MinTime']==false&&$_GET['MaxTime']==true)
     {
         $MaxDate = date("Y-m-d H:i:s",strtotime($_GET['Datum']." ".$_GET['MaxTime'].":00"));
-        echo $MaxDate." ";
     }
 
     $MinDateNoTime = $_GET['Datum']." 00:00:00";
@@ -36,34 +32,33 @@
 //------------------------------------------------------------------------
     if($_GET['Datum']==true&&$_GET['MinTime']==true&&$_GET['MaxTime']==true)
     {
-        $sql ="SELECT * FROM studenten WHERE TIJD BETWEEN ".$MinDate." AND ".$MaxDate;
+        $sql ="SELECT * FROM studenten WHERE TIJD BETWEEN '".$MinDate."' AND '".$MaxDate."'";
     }
     elseif($_GET['Datum']==true&&$_GET['MinTime']==true&&$_GET['MaxTime']==false)
     {
-        $sql ="SELECT * FROM studenten WHERE TIJD BETWEEN ".$MinDate." AND ".$MaxDateNoTime;
+        $sql ="SELECT * FROM studenten WHERE TIJD BETWEEN '".$MinDate."' AND '".$MaxDateNoTime."'";
     }
     elseif($_GET['Datum']==true&&$_GET['MinTime']==false&&$_GET['MaxTime']==true)
     {
-        $sql ="SELECT * FROM studenten WHERE TIJD BETWEEN ".$MinDateNoTime." AND ".$MaxDate;
+        $sql ="SELECT * FROM studenten WHERE TIJD BETWEEN '".$MinDateNoTime."' AND '".$MaxDate."'";
     }
     elseif($_GET['Datum']==true&&$_GET['MinTime']==false&&$_GET['MaxTime']==false)
     {
-        $sql =$sql ="SELECT * FROM studenten WHERE TIJD BETWEEN ".$MinDateNoTime." AND ".$MaxDateNoTime;
+        $sql ="SELECT * FROM studenten WHERE TIJD BETWEEN '".$MinDateNoTime."' AND '".$MaxDateNoTime."'";
     }
     else
     {
         $sql ="SELECT * FROM studenten";
     }
-    echo $sql;
 //------------------------------------------------------------------------
         $result = $conn->query($sql);
         if ($result->num_rows > 0) 
         {
-            echo "<table><tr><th>ID|</th><th>NFC_ID|</th><th>STUDENTEN_ID</th><th>VOORNAAM</th><th>ACTERNAAM</th><th>TIJD</th></tr>";
+            echo "<table><tr><th>ID</th><th>NFC_ID</th><th>STUDENTEN_ID</th><th>VOORNAAM</th><th>ACTERNAAM</th><th>TIJD</th></tr>";
             // output data of each row
             while($row = $result->fetch_assoc()) 
             {
-                echo "<tr><td>".$row["ID"]."|</td><td>".$row["NFC_ID"]."|</td><td>".$row["STUDENTEN_ID"]."</td><td>".$row["VOORNAAM"]."</td><td>".$row["ACHTERNAAM"]."</td><td>".$row["TIJD"]."</td></tr>";
+                echo "<tr><td>".$row["ID"]."</td><td>".$row["NFC_ID"]."</td><td>".$row["STUDENTEN_ID"]."</td><td>".$row["VOORNAAM"]."</td><td>".$row["ACHTERNAAM"]."</td><td>".$row["TIJD"]."</td></tr>";
             }
             echo "</table>";
         }
