@@ -33,6 +33,13 @@ function PrintTabel()
   {
 		document.getElementById("tabel").innerHTML = this.responseText;
 	};
-	xmlhttp.open("GET","DatumFilter.php?MinTime="+document.getElementById("MinTime").value+"&MaxTime="+document.getElementById("MaxTime").value+"&Datum="+document.getElementById("Datum").value,true);
+	xmlhttp.open("GET","DatumFilter.php?MinTime="
+              +document.getElementById("MinTime").value
+              +"&MaxTime="+document.getElementById("MaxTime").value
+              +"&Datum="+document.getElementById("Datum").value
+              +"&Voornaam="+document.getElementById("Voornaam").value
+              +"&Achternaam="+document.getElementById("Achternaam").value
+              +"&StudentenID="+document.getElementById("StudentenID").value
+              +"&NFCID="+document.getElementById("NFCID").value,true);
 	xmlhttp.send();
 }
