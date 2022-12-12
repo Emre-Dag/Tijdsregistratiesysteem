@@ -63,14 +63,14 @@ while block_choice is None:
     print('')
     block_choice = input('Enter user ID: ')
     try:
-        block_choice = int(block_choice)
+        block_choice = str(block_choice)
     except ValueError:
         print('Error! Unrecognized option.')
         continue
     # Decimal value not greater than hex number with 6 digits
-    if not (0 <= block_choice < 16777215):
-        print('Error! User ID must be within 0 to 4294967295.')
-        continue
+    #if not (0 <= block_choice < 16777215):
+    #    print('Error! User ID must be within 0 to 4294967295.')
+    #    continue
     print('')
 print('You chose the block type: {0}'.format(block_choice))
 print('')
@@ -100,7 +100,7 @@ data = bytearray(16)
 data[0:2] = HEADER
 #-----------------------------------------------------
 # Convert int to hex string with up to 6 digits
-value = format(int(block_choice))
+value = format(str(block_choice))
 print(value)
 while (12 > len(value)):
     value = '0' + value
