@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IoT Taak </title>
+	
+	<link rel="stylesheet" href="tijdsregistratiesysteem.css">
+	<link rel="icon" href="Kompas_Logo.png">
+	<meta charset="utf-8">
+</head>
+<body class="body" onload="start()" ></body>
+<div class="header">
+	<h1>Tijdsregeling</h1>
+	<img class="topleft" src="Kompas_Logo.png" alt="Kompas_Logo">
+	<div class="topright" id="clock"></div>
+</div>
+<br>
+<div class="Tableborder2">
+	<h4>Voeg een nieuwe student toe:</h4>
+	<label for="NFCIDN">NFCID:</label>
+	<input type="text" id="NFCIDN" name="NFCIDN">
+	<button onclick="document.getElementById('NFCIDN').value = ''">Clear NFCID</button>
+	<br>
+	<label for="KlasN">Klas:</label>
+	<input type="text" id="KlasN" name="KlasN">
+	<button onclick="document.getElementById('KlasN').value = ''">Clear Klas</button>
+	<br>
+	<label for="VoornaamN">Voornaam:</label>
+	<input type="text" id="VoornaamN" name="VoornaamN">
+	<button onclick="document.getElementById('VoornaamN').value = ''">Clear Voornaam</button>
+	<br>
+	<label for="AchternaamN">Achternaam:</label>
+	<input type="text" id="AchternaamN" name="AchternaamN">
+	<button onclick="document.getElementById('AchternaamN').value = ''">Clear Achternaam</button>
+	<br>
+	<button onClick="AddNewStudent()">Add a new student</button>
+<br>
+<div id="AddStudent"></div>
+</div>
+<br>
+<div class="Tableborder2">
+	<h4>Verwijder een student:</h4>
+	<label for="NFCIDD">NFCID:</label>
+	<input type="text" id="NFCIDD" name="NFCIDD">
+	<br>
+	<button onClick="DeleteUID()">Delete student</button>
+<br>
+<div id="DeleteUID"></div>
+</div>
+<br>
+<div class="Tableborder2">
+		<h4>Update waardes voor een gegeven UID:</h4>
+		<label for="NFCID">NFCID:</label>
+		<input type="text" id="NFCID" name="NFCID">
+		<button onclick="document.getElementById('NFCID').value = ''">Clear NFCID</button>
+		<br><br>
+
+		<label for="Klas">Klas:</label>
+		<input type="text" id="Klas" name="Klas">
+		<button onclick="document.getElementById('Klas').value = ''">Clear Klas</button>
+		<br>
+		<label for="Voornaam">Voornaam:</label>
+		<input type="text" id="Voornaam" name="Voornaam">
+		<button onclick="document.getElementById('Voornaam').value = ''">Clear Voornaam</button>
+		<br>
+		<label for="Achternaam">Achternaam:</label>
+		<input type="text" id="Achternaam" name="Achternaam">
+		<button onclick="document.getElementById('Achternaam').value = ''">Clear Achternaam</button>
+		<br>
+		<button onClick="UpdateStudentWithUID()">Update student With UID</button>
+	<br>
+	<div id="Update"></div>
+</div>
+<br>
+<div class="Tableborder2">
+	<h4>Update UID voor een gegeven Naam, voornaam en klas:</h4>
+		<label for="Klas2">Klas:</label>
+		<input type="text" id="Klas2" name="Klas2">
+		<button onclick="document.getElementById('Klas2').value = ''">Clear Klas</button>
+	<br>
+		<label for="Voornaam2">Voornaam:</label>
+		<input type="text" id="Voornaam2" name="Voornaam2">
+		<button onclick="document.getElementById('Voornaam2').value = ''">Clear Voornaam</button>
+	<br>
+		<label for="Achternaam2">Achternaam:</label>
+		<input type="text" id="Achternaam2" name="Achternaam2">
+		<button onclick="document.getElementById('Achternaam2').value = ''">Clear Achternaam</button>
+	<br>
+	<br>
+		<label for="NFCID2">NFCID:</label>
+		<input type="text" id="NFCID2" name="NFCID2">
+		<button onclick="document.getElementById('NFCID2').value = ''">Clear NFCID</button>
+	<button onClick="UpdateUIDWithStudent()">Update UID with student</button>
+<br>
+<div id="Update2"></div>
+</div>
+<br>
+
+<div class="Tableborder1">
+	<h4>Filter:</h4>
+		<label for="NFCIDF">NFCID:</label>
+		<input type="text" id="NFCIDF" name="NFCIDF">
+		<button onclick="document.getElementById('NFCIDF').value = ''">Clear NFCID</button>
+		<br>
+		<label for="KlasF">Klas:</label>
+		<input type="text" id="KlasF" name="KlasF">
+		<button onclick="document.getElementById('KlasF').value = ''">Clear Klas</button>
+		<br>
+		<label for="VoornaamF">Voornaam:</label>
+		<input type="text" id="VoornaamF" name="VoornaamF">
+		<button onclick="document.getElementById('VoornaamF').value = ''">Clear Voornaam</button>
+		<br>
+		<label for="AchternaamF">Achternaam:</label>
+		<input type="text" id="AchternaamF" name="AchternaamF">
+		<button onclick="document.getElementById('AchternaamF').value = ''">Clear Achternaam</button>
+		<br>
+		<label for="Datum">Date:</label>
+		<input type="Date" id="Datum" name="Datum">
+		<button onclick="document.getElementById('Datum').value = ''">Clear Datum</button>
+		<br>
+		<label for="MinTime">Min time:</label>
+		<input type="time" id="MinTime" name="MinTime">
+		<button onclick="document.getElementById('MinTime').value = ''">Clear Min time</button>
+		<br>
+		<label for="MaxTime">Max time:</label>
+		<input type="time" id="MaxTime" name="MaxTime">
+		<button onclick="document.getElementById('MaxTime').value = ''">Clear Max time</button>
+		<br>
+		<button onClick="PrintTabel()">Filter</button>
+	<br>
+	<div id="tabel" ></div>
+</div>
+
+<br>
+	<script src="tijdsregistratiesysteem.js"></script>
+</body>	
+
+</html>

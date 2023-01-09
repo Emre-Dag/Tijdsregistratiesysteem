@@ -37,8 +37,30 @@
   }
   .topleft {
     position: absolute;
-    height:8%;
-    top: 30px;
+    height:10%;
+    top: 25px;
     left: 16px;
     font-size: 18px;
+  }
+  .Tableborder1 {
+    position: relative;
+    border-style: solid;
+    margin:4px, 4px;
+      padding:4px;
+    width: auto;
+      height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+  }
+  .Tableborder2 {
+    position: relative;
+    border-style: solid;
+    margin:4px, 4px;
+      padding:4px;
+    width: auto;
+      height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
   }
