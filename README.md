@@ -9,7 +9,7 @@
 
 ##
 
-#### 1. uitleg rpi <a name="1"></a>
+#### 1. Uitleg rpi <a name="1"></a>
     // flash
     // installeren, sh file
     // verbinden wifi (scherm aan hangen) => wifi of ethernet?
@@ -24,6 +24,6 @@
     // hoe nieuwe user registreren
     
 
-#### 4. Website <a name="4"></a>
+#### 4. PN532 <a name="4"></a>
     // aansluiting PN532 met rpi (schema, simpel uitgelegd bedrading)
     // extra chips bijbestellen? website geven als voorbeeld
