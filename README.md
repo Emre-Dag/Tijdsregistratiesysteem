@@ -19,7 +19,7 @@
     // algemene uitleg van functionaliteiten
     // instructies: hoe eraan geraken, services voor user uitleggen
 
-#### 3. Database <a name="2"></a>
+#### 3. Database <a name="3"></a>
     // algemene simpele uitleg van de php omgeving (log in, delete insert enz)
     // hoe nieuwe user registreren
     
