@@ -16,6 +16,11 @@ from adafruit_pn532.adafruit_pn532 import MIFARE_CMD_AUTH_B
 # from adafruit_pn532.i2c import PN532_I2C
 from adafruit_pn532.spi import PN532_SPI
 
+try:
+    input = raw_input
+except NameError:
+    pass
+
 # PN532 configuration for a Raspberry Pi GPIO:
 
 # SPI connection:
@@ -32,8 +37,7 @@ print("Found PN532 with firmware version: {0}.{1}".format(ver, rev))
 # Configure the key to use for writing to the MiFare card.  You probably don't
 # need to change this from the default below unless you know your card has a
 # different key associated with it.
-CARD_KEY = [0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF]
-
+CARD_KEY = b"\xFF\xFF\xFF\xFF\xFF\xFF"
 # Number of seconds to delay after reading data.
 DELAY = 0.5
 
@@ -72,5 +76,15 @@ while True:
         print('Card is not written with proper block data!')
         continue
     # Parse out the block type and subtype
-    print('User Id: {0}'.format(int(data[2:8].decode("utf-8"), 16)))
-    time.sleep(DELAY);
+    value = data[2:8]
+    print(value)
+    print(list(value))
+    h = value.hex()
+    i = int.from_bytes(value, "big")
+    s = value.decode()
+
+    print("hex number: ",h)    
+    print("int number: ",i)
+    print("string: ",s)
+    #print('User Id: {0}'.format(float(data[2:8]).decode("utf-8"), 16))
+    time.sleep(DELAY)

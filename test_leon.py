@@ -3,12 +3,18 @@
 import binascii
 import sys
 import struct
+
 import board
 import busio
-from digitalio import DigitalInOut
-import Adafruit_PN532 as PN532
-from adafruit_pn532.spi import PN532_SPI
+from adafruit_pn532.adafruit_pn532 import MIFARE_CMD_AUTH_B
 
+
+# Additional import needed for I2C/SPI
+from digitalio import DigitalInOut
+#
+# NOTE: pick the import that matches the interface being used
+
+from adafruit_pn532.spi import PN532_SPI
 # Hack to make code compatible with both Python 2 and 3 (since 3 moved
 # raw_input from a builtin to a different function, ugh).
 try:
@@ -16,22 +22,22 @@ try:
 except NameError:
     pass
 
-# PN532 configuration for a Raspberry Pi GPIO:
-
-
-
+# SPI connection:
+spi = busio.SPI(board.SCK, board.MOSI, board.MISO)
+cs_pin = DigitalInOut(board.D5)
+pn532 = PN532_SPI(spi, cs_pin, debug=False)
 # Configure the key to use for writing to the MiFare card.  You probably don't
 # need to change this from the default below unless you know your card has a
 # different key associated with it.
-CARD_KEY = [0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF]
+CARD_KEY =b"\xFF\xFF\xFF\xFF\xFF\xFF"
 
 # Prefix, aka header from the card
 HEADER = b'BG'
 
-spi = busio.SPI(board.SCK, board.MOSI, board.MISO)
-cs_pin = DigitalInOut(board.D5)
-pn532 = PN532.PN532(spi, cs_pin, debug=False)
-pn532.begin()
+ic, ver, rev, support = pn532.firmware_version
+print("Found PN532 with firmware version: {0}.{1}".format(ver, rev))
+
+# Configure PN532 to communicate with MiFare cards
 pn532.SAM_configuration()
 
 # Step 1, wait for card to be present.
@@ -57,14 +63,14 @@ while block_choice is None:
     print('')
     block_choice = input('Enter user ID: ')
     try:
-        block_choice = int(block_choice)
+        block_choice = str(block_choice)
     except ValueError:
         print('Error! Unrecognized option.')
         continue
     # Decimal value not greater than hex number with 6 digits
-    if not (0 <= block_choice < 16777215):
-        print('Error! User ID must be within 0 to 4294967295.')
-        continue
+    #if not (0 <= block_choice < 16777215):
+    #    print('Error! User ID must be within 0 to 4294967295.')
+    #    continue
     print('')
 print('You chose the block type: {0}'.format(block_choice))
 print('')
@@ -81,7 +87,7 @@ print('Writing card (DO NOT REMOVE CARD FROM PN532)...')
 
 # Write the card!
 # First authenticate block 4.
-if not pn532.mifare_classic_authenticate_block(uid, 4, PN532.MIFARE_CMD_AUTH_B,
+if not pn532.mifare_classic_authenticate_block(uid, 4, MIFARE_CMD_AUTH_B,
                                                CARD_KEY):
     print('Error! Failed to authenticate block 4 with the card.')
     sys.exit(-1)
@@ -92,11 +98,15 @@ if not pn532.mifare_classic_authenticate_block(uid, 4, PN532.MIFARE_CMD_AUTH_B,
 data = bytearray(16)
 # Add header
 data[0:2] = HEADER
+#-----------------------------------------------------
 # Convert int to hex string with up to 6 digits
-value = format(block_choice, 'x')
-while (6 > len(value)):
+value = format(str(block_choice))
+print(value)
+while (12 > len(value)):
     value = '0' + value
-data[2:8] = value
+    print(value)
+data[2:8] = bytes.fromhex(value)
+#-----------------------------------------------------
 # Finally write the card.
 if not pn532.mifare_classic_write_block(4, data):
     print('Error! Failed to write to the card.')
