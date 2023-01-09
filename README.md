@@ -18,7 +18,7 @@
 #### 2. Website <a name="2"></a>
     // algemene uitleg van functionaliteiten
     // instructies: hoe eraan geraken, services voor user uitleggen
-
+    De website wordt gebruikt als een dashboard om makkelijk de database aan te passen. Hier kan je nieuwe student toe
 #### 3. Database <a name="3"></a>
     // algemene simpele uitleg van de php omgeving (log in, delete insert enz)
     // hoe nieuwe user registreren
