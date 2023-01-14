@@ -151,6 +151,13 @@ After all configurations have been imported both software-wise with all proper l
 
 #### 5. Possible extensions <a name="5"></a>
 
+- Het installeren en uitvoeren van deze project.
+
+- Export database naar CSV file (logboek), eventueel automatisch per dag/week/maand/jaar
+- Veiligheid en performantie van code: dubbel gescand, toegestaande tijd tussen scannen
+
+- Extra uitbreiding: scherm hangen zodat leerlingen kunnen volgen of registratie voltooid is
+
 
 #### 6. Conclusion <a name="6"></a>
 Conclusie: Wegens tijdgebrek hebben we deze projecten niet kunnen installeren. We kregen een te laat antwoord op de mail waarop we dachten om deze te installeren in de kerstvakantie.
