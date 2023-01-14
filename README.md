@@ -20,6 +20,8 @@ To install the Raspberry Pi operating system, click on 'CHOOSE OS' in the Raspbe
 When the image writing is completed successfully, you may remove the SD card from your computer and insert it into the Raspberry Pi. Then connect the peripherals such as keyboard, mouse, camera, screen (HDMI).
 The Raspberry Pi is now prepared, but still needs to be configured.
 
+---
+
 ## Connecting Raspberry Pi to wifi
 
 Plug in the Raspberry Pi and wait for it to turn on.
@@ -43,6 +45,7 @@ After choosing your network, a window appears in the middle. Enter your network 
 Make sure the Raspberry Pi is connected to the network and note the assigned IP address by moving the cursor over the Wi-Fi icon. This will bring up a window with the IP address. Make sure that both the Raspberry Pi and your PC are connected to the same wifi network.
 
 ![image](https://user-images.githubusercontent.com/79916493/212494639-40bbff51-ea16-4650-b226-7e30f3fe2880.png)
+
 *possible IP-address: 169.154.146.220, do not take over.*
 
 To enable SSH on the Raspberry Pi, go to the menu at the top left and select "Preferences" and then "Raspberry Pi Configuration." In the "Interfaces" tab, then click on "SSH" to enable it. Also enable "SPI" since it will be used later.
@@ -78,6 +81,7 @@ Copy and paste (right mouse button) into the Putty terminal to install the follo
 •	sudo pip3 install mysql-connector-python
 •	sudo pip3 install adafruit-blinka
 
+---
 
 #### 2. Website <a name="2"></a>
 
@@ -106,6 +110,7 @@ Finally, it is also possible to view student registrations and filter certain da
 
 ![image](https://user-images.githubusercontent.com/79916493/212494706-f3992a91-6167-4f62-8c97-8ffadcfcbad5.png)
 
+---
  
 #### 3. Database <a name="3"></a>
 phpMyAdmin is een gratis en open-source webgebaseerde tool geschreven in PHP die wordt gebruikt om MySQL en MariaDB databases te beheren en administreren. Het biedt een gebruiksvriendelijke webinterface om met databases te communiceren, waarmee gebruikers verschillende taken kunnen uitvoeren zoals het maken, wijzigen en verwijderen van databases en tabellen, beheren van gebruikers , SQL-queries uitvoeren en meer.
@@ -149,6 +154,7 @@ It is of importance to properly designate the appropriate communication protocol
  
 After all configurations have been imported both software-wise with all proper libraries and hardware configurations with proper wiring and proper communication protocol chosen, the suitable code can be executed.
 
+---
 
 #### 5. Possible extensions <a name="5"></a>
 
@@ -159,6 +165,7 @@ After all configurations have been imported both software-wise with all proper l
 
 - Extra uitbreiding: scherm hangen zodat leerlingen kunnen volgen of registratie voltooid is
 
+---
 
 #### 6. Conclusion <a name="6"></a>
 Conclusie: Wegens tijdgebrek hebben we deze projecten niet kunnen installeren. We kregen een te laat antwoord op de mail waarop we dachten om deze te installeren in de kerstvakantie.
