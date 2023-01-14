@@ -1,5 +1,10 @@
 # Time registration system
 
+**Introduction**   
+
+This project includes a time registration system worked out for the method school "Het Kompas". The current system consisted of a QR code that they had to scan themselves to be registered. This gave several security problems.  
+As a solution we worked out 3 methods of which we went deeper into the system that works with NFC badges scanning and registering on a database.  
+
 **Manual use website and Raspberry Pi**
 
 * [Raspberry Pi](#1)
