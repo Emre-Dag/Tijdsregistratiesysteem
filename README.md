@@ -101,6 +101,10 @@ Wachtwoord: raspberry
 Poort: 22
 Klik op 'Snelverbinden' om een verbinding te maken.
 
+![tempsnip](https://user-images.githubusercontent.com/79916493/212497405-83cdc9a2-b6ce-4aa9-ba75-92b23529c712.png)
+
+*Links zie je de werkomgeving van je pc en rechts die van de Raspberry Pi. Nu kan er bestanden uitgewisseld worden tussen deze 2 apparaten.*
+
 ---
  
 #### 2. Database <a name="2"></a>
