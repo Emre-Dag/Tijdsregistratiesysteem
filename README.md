@@ -3,8 +3,8 @@
 **Manual use website and Raspberry Pi**
 
 * [Raspberry Pi](#1)
-* [Website](#2)
-* [Database](#3)
+* [Database](#2)
+* [Website](#3)
 * [NFC (PN532)](#4)
 * [Possible extensions](#5)
 * [Conclusion](#6)
