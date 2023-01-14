@@ -95,10 +95,15 @@ Om de code te transporteren op de Raspberry Pi hebben we vervolgens een FTP-clie
 *Download [FileZilla](https://filezilla-project.org/download.php?type=client)*
 
 Open FileZilla en voer de gegevens in die je had teruggevonden in de vorige stappen.
+
 Host: IP-adres
+
 Gebruikersnaam: pi
+
 Wachtwoord: raspberry
+
 Poort: 22
+
 Klik op 'Snelverbinden' om een verbinding te maken.
 
 ![tempsnip](https://user-images.githubusercontent.com/79916493/212497405-83cdc9a2-b6ce-4aa9-ba75-92b23529c712.png)
