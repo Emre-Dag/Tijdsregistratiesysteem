@@ -117,6 +117,11 @@ Klik op 'Snelverbinden' om een verbinding te maken.
 
 Selecteer links de repository die gedownload is en sleep de de code (RPI_master.py) rechts in het mapje Desktop.
 
+Onderstaande commando's om de code te runnen.
+
+![image](https://user-images.githubusercontent.com/79916493/212497788-cd8056ea-5394-46ce-8456-73bfa622d8ff.png)
+
+
 ---
  
 #### 2. Database <a name="2"></a>
