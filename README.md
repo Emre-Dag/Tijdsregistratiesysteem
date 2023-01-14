@@ -10,35 +10,37 @@
 * [Conclusion](#6)
 
 #### 1. Raspberry Pi <a name="1"></a>
-Om een project te kunnen uitvoeren op een Raspberry Pi, moet het Raspberry Pi operating system geïnstalleerd worden op een SD-kaart van minstens 16GB. Deze SD-kaart mag volledig geformatteerd worden vooraleer eraan begonnen wordt. 
-Om dit te doen, moet je eerst de Raspberry Pi Imager (link in md zetten) installeren op je computer. Deze tool is een snelle en eenvoudige manier om het Raspberry Pi OS op een SD-kaart te installeren. 
-Steek de SD-kaart in je computer en open de Imager. Bij het openen van de Imager, zie je een welkomstscherm.
+To run a project on a Raspberry Pi, the Raspberry Pi operating system must be installed on an SD card of at least 16GB. This SD card may be fully formatted before starting. 
+To do this, you must first install the Raspberry Pi Imager (put link in md) on your computer. This tool is a quick and easy way to install the Raspberry Pi OS on an SD card. 
+Insert the SD card into your computer and open the Imager. Upon opening the Imager, you will see a welcome screen.
 
 ![image](https://user-images.githubusercontent.com/79916493/212494599-78593b8f-7f71-4e07-ac3d-df20608baf87.png)
  
-Om het Raspberry Pi operating system te installeren, klik je in de Raspberry Pi Imager op 'CHOOSE OS' en selecteer je Raspberry Pi OS (32-bit). Vervolgens kies je de SD-kaart waarop je het OS wilt installeren door op 'CHOOSE STORAGE' te klikken en de SD-kaart te selecteren.
-Wanneer het schrijven van de image succesvol is afgerond, mag je de SD-kaart verwijderen uit je computer en in de Raspberry Pi plaatsen. Sluit vervolgens de randapparatuur aan zoals het toetsenbord, muis, camera, scherm (HDMI). 
-De Raspberry Pi is nu klaargemaakt, maar moet nog geconfigureerd worden.
+To install the Raspberry Pi operating system, click on 'CHOOSE OS' in the Raspberry Pi Imager and select Raspberry Pi OS (32-bit). Then choose the SD card you want to install the OS on by clicking on 'CHOOSE STORAGE' and selecting the SD card.
+When the image writing is completed successfully, you may remove the SD card from your computer and insert it into the Raspberry Pi. Then connect the peripherals such as keyboard, mouse, camera, screen (HDMI).
+The Raspberry Pi is now prepared, but still needs to be configured.
 
-Raspberry Pi verbinden met wifi
-Sluit de Raspberry Pi aan en wacht tot deze is ingeschakeld.
+## Connecting Raspberry Pi to wifi
 
-Startscherm:
+Plug in the Raspberry Pi and wait for it to turn on.
+
+Start screen: 
+
 
 ![image](https://user-images.githubusercontent.com/79916493/212494614-df387db6-3c75-4315-9492-5c45c7201bfb.png)
 
  
-Om verbinding te maken met een wifi-netwerk, klikt u op het wifi-icoontje in de rechterbovenhoek van het scherm. Zet de wifi aan en selecteer vervolgens het gewenste wifi-netwerk.
+To connect to a wifi network, click on the wifi icon in the upper right corner of the screen. Turn on the wifi and then select the desired wifi network.
 
 ![image](https://user-images.githubusercontent.com/79916493/212494618-fd9cc7a0-12c8-4040-af19-d79da590fc8b.png)
 
  
-Na het kiezen van uw netwerk, verschijnt er een venster in het midden. Voer hier uw netwerkwachtwoord in.
+After choosing your network, a window appears in the middle. Enter your network password here.
 
 ![image](https://user-images.githubusercontent.com/79916493/212494623-e12ee1f1-16d5-4063-89ac-5f2f6f26ec43.png)
 
  
-Zorg dat de Raspberry Pi verbonden is met het netwerk en noteer het toegewezen IP-adres door met de cursor over het wifi-icoontje te bewegen. Hierdoor zal een venster verschijnen met het IP-adres. Let erop dat zowel de Raspberry Pi als je PC op hetzelfde wifi-netwerk zijn aangesloten.
+Make sure the Raspberry Pi is connected to the network and note the assigned IP address by moving the cursor over the Wi-Fi icon. This will bring up a window with the IP address. Make sure that both the Raspberry Pi and your PC are connected to the same wifi network.
 
 ![image](https://user-images.githubusercontent.com/79916493/212494639-40bbff51-ea16-4650-b226-7e30f3fe2880.png)
 
