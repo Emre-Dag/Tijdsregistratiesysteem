@@ -101,8 +101,15 @@ Poort: 22
 Klik op 'Snelverbinden' om een verbinding te maken.
 
 ---
+ 
+#### 2. Database <a name="2"></a>
+phpMyAdmin is een gratis en open-source webgebaseerde tool geschreven in PHP die wordt gebruikt om MySQL en MariaDB databases te beheren en administreren. Het biedt een gebruiksvriendelijke webinterface om met databases te communiceren, waarmee gebruikers verschillende taken kunnen uitvoeren zoals het maken, wijzigen en verwijderen van databases en tabellen, beheren van gebruikers , SQL-queries uitvoeren en meer.
+In the project there are 2 tables used as database. One is used purely for keeping track of students' time and the other for keeping track of all the students with their information.
+Both tables use the following information. A general ID, this is nothing special and is just a counter when a new line comes in. The NFC ID is the Uid (unique identifier) of the NFC tag. This is followed by the student's general information such as first name, last name and the class the student is in. Only in the database that keeps track of students' time records is also a column with the time + date attached.
 
-#### 2. Website <a name="2"></a>
+---
+
+#### 3. Website <a name="3"></a>
 
 The website serves as a dashboard for modifying the database and is currently hosted on a PXL server owned by the student. However, it will need to be moved to a paid server in the future.
 On the website, there are several functions that allow for manipulation of the ”studenten_default” database. One of these functions is the ability to add new students to the database.
@@ -128,13 +135,6 @@ The website also allows for editing of a student's information by inputting thei
 Finally, it is also possible to view student registrations and filter certain data from the "student" database.
 
 ![image](https://user-images.githubusercontent.com/79916493/212494706-f3992a91-6167-4f62-8c97-8ffadcfcbad5.png)
-
----
- 
-#### 3. Database <a name="3"></a>
-phpMyAdmin is een gratis en open-source webgebaseerde tool geschreven in PHP die wordt gebruikt om MySQL en MariaDB databases te beheren en administreren. Het biedt een gebruiksvriendelijke webinterface om met databases te communiceren, waarmee gebruikers verschillende taken kunnen uitvoeren zoals het maken, wijzigen en verwijderen van databases en tabellen, beheren van gebruikers , SQL-queries uitvoeren en meer.
-In the project there are 2 tables used as database. One is used purely for keeping track of students' time and the other for keeping track of all the students with their information.
-Both tables use the following information. A general ID, this is nothing special and is just a counter when a new line comes in. The NFC ID is the Uid (unique identifier) of the NFC tag. This is followed by the student's general information such as first name, last name and the class the student is in. Only in the database that keeps track of students' time records is also a column with the time + date attached.
 
 ---
 
