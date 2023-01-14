@@ -152,7 +152,7 @@ The PN532 is a highly advanced NFC (Near Field Communication) controller develop
 Connection PN532 with Rasberry Pi 3
 For the wiring diagram, the below diagram was applied. Using a wire, connect the diagram below from the rasberry pi headers to the headers (solder in yourself) of the PN532.
 
-![image](https://user-images.githubusercontent.com/79916493/212494753-7373b34e-3af5-426e-a041-d2f9546b4c99.png)
+![image](https://user-images.githubusercontent.com/79916493/212496545-eea25161-0ee1-436c-9ea1-b0dc2b5f853a.png)
 
  
 It is of importance to properly designate the appropriate communication protocol on the PN532. This project employs the use of the SPI communication protocol. The image below provided the appropriate positioning of the sliders. Additionally, as indicated in the table, the left slider button on the PN532 should be in the down position, while the right one should be in the up position.
