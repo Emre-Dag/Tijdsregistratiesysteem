@@ -88,6 +88,14 @@ Copy and paste (right mouse button) into the Putty terminal to install the follo
 
 - sudo pip3 install adafruit-blinka
 
+- sudo apt-get install python3-rpi.gpio
+
+- pip install opencv-python
+
+- pip install webbrowser
+
+- pip install time
+
 ---
 
 Om de code te transporteren op de Raspberry Pi hebben we vervolgens een FTP-client nodig. En als laatste een SSH-client om commando's uit te voeren op de Raspberry Pi. Deze had je in het begin moeten installeren.
@@ -202,6 +210,11 @@ After all configurations have been imported both software-wise with all proper l
 
 #### 5. Link to projects <a name="5"></a>
 
+In volgende folders staan de bijhorende readmes en code.
+- [Algemene NFC code](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/NFC)
+- [Website](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/Website)
+- [Extra NFC code](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/extra_nfc)
+- [QR-code](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/qrcode)
 
 ---
 
