@@ -1,13 +1,4 @@
-# SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
-# SPDX-License-Identifier: MIT
-
-"""
-This example shows connecting to the PN532 with I2C (requires clock
-stretching support), SPI, or UART. SPI is best, it uses the most pins but
-is the most reliable and universally supported.
-After initialization, try waving various 13.56MHz RFID cards over it!
-"""
-
+# import libraries
 import board
 import busio
 from digitalio import DigitalInOut
@@ -17,6 +8,7 @@ from adafruit_pn532.spi import PN532_SPI
 import mysql.connector
 import re
 
+# connect to database
 mydb = mysql.connector.connect(
   host="db4free.net",
   user="kmpspxl",
@@ -50,7 +42,7 @@ while True:
         print("Found card with UID:", [hex(i) for i in uid])
         id_dec = str(uid).strip("\,[,],(,),'")
         print(id_dec)
-        
+        # Converting UID to integer value
         mylist = []
         for i in uid:
           print(i)
@@ -61,12 +53,15 @@ while True:
           s=re.sub(", ","",output_id)
 
         out_int = int(s)
-
+        # Print the UID(NFC ID)
         print(mylist)
         print(out_int)
+        # Copy information of the UID(Name,Surname,Class) from table "studenten_default" to "studenten" with the current time
         mycursor.execute("INSERT INTO studenten (KLAS,VOORNAAM,ACHTERNAAM,NFC_ID, TIJD) SELECT KLAS,VOORNAAM,ACHTERNAAM,NFC_ID,NOW() FROM studenten_default WHERE NFC_ID =({})".format(out_int))
         mydb.commit()
         print("data verstuurd!!!!!!!!!!!")
+
+        # Zoomer high for 1 second
         GPIO.output(4, GPIO.HIGH)
         time.sleep(1)
         GPIO.output(4, GPIO.LOW)
