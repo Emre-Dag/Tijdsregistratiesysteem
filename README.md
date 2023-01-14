@@ -6,8 +6,9 @@
 * [Database](#2)
 * [Website](#3)
 * [NFC (PN532)](#4)
-* [Possible extensions](#5)
-* [Conclusion](#6)
+* [Link to projects](#5)
+* [Possible extensions](#6)
+* [Conclusion](#7)
 
 ---
 
@@ -178,38 +179,44 @@ After all configurations have been imported both software-wise with all proper l
 
 ---
 
-#### 5. Possible extensions <a name="5"></a>
+#### 5. Link to projects <a name="5"></a>
 
-- Het installeren en uitvoeren van deze project.
-
-- Export database naar CSV file (logboek), eventueel automatisch per dag/week/maand/jaar
-- Veiligheid en performantie van code: dubbel gescand, toegestaande tijd tussen scannen
-
-- Extra uitbreiding: scherm hangen zodat leerlingen kunnen volgen of registratie voltooid is
 
 ---
 
-#### 6. Conclusion <a name="6"></a>
-Wegens tijdgebrek hebben we deze projecten niet kunnen installeren. We kregen een te laat antwoord op de mail waarop we dachten om deze te installeren in de kerstvakantie.
+#### 6. Possible extensions <a name="6"></a>
+
+- Installing and running this project.
+
+- Export database to CSV file (log), possibly automatically per day/week/month/year
+- Security and performance of code: double scanned, allowed time between scanning
+- Website and database hosted on a better platform (local or paid server)
+- Additional extension: hang screen so students can follow if registration is complete
+- Making a casing for the NFC reader and RPI
 
 ---
 
-Tijden aanwezig gewerkt aan het project:
-- 7/10: 3uur
-- naar kompas: 3uur
-- 26/10: 3uur
-- 28/10: 3uur
-- 14/11: 3uur
-- 18/11: 3.5-4uur
-- 21/11: 3uur
-- 25/11: 2.5uur
-- 2/12: 3uur
-- 5/12: 3uur
-- 9/12: 3.5uur
-- 12/12: 1.5uur
-- 16/12: 2uur
-- 23/12: 3.5uur
-- 13/01: 5uur
+#### 7. Conclusion <a name="7"></a>
+Due to lack of time, we have not been able to install this project. We received a late reply to the mail on which we thought to install them during the Christmas vacation.
 
-Ongeveer +- 45uur (2 dagen per week, elke vrijdag in corda 3 of 7)
+---
+
+Presence worked on the project:
+- 7/10: 3h
+- naar kompas: 3h
+- 26/10: 3h
+- 28/10: 3h
+- 14/11: 3h
+- 18/11: 3.5-4h
+- 21/11: 3h
+- 25/11: 2.5h
+- 2/12: 3h
+- 5/12: 3h
+- 9/12: 3.5h
+- 12/12: 1.5h
+- 16/12: 2h
+- 23/12: 3.5h
+- 13/01: 5h
+
+About +- 45 hours (2 days a week in corda 3 or 7)
 
