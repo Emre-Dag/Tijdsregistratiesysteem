@@ -61,7 +61,7 @@ print('== STEP 2 =========================')
 block_choice = None
 while block_choice is None:
     print('')
-    block_choice = input('Enter user ID: ')
+    block_choice = input('Enter user ID (max 12 numbers): ')
     try:
         block_choice = str(block_choice)
     except ValueError:
