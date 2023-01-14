@@ -54,7 +54,8 @@ To enable SSH on the Raspberry Pi, go to the menu at the top left and select "Pr
 
 ![image](https://user-images.githubusercontent.com/79916493/212494652-a994224c-8bbf-4e99-b110-24e068bf60f1.png)
 
- 
+*Download [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) (MSI Windows Installer: 64-bit x86:)*
+
 When Putty is opened, the following screen will present itself.
 
 PuTTY is a free and open-source serial console and network file transfer application. It is widely used to remotely access servers, network devices and other equipment. It is available for Windows, Linux and macOS.
@@ -85,6 +86,19 @@ Copy and paste (right mouse button) into the Putty terminal to install the follo
 - sudo pip3 install mysql-connector-python
 
 - sudo pip3 install adafruit-blinka
+
+---
+
+Om de code te transporteren op de Raspberry Pi hebben we vervolgens een FTP-client nodig. En als laatste een SSH-client om commando's uit te voeren op de Raspberry Pi. Deze had je in het begin moeten installeren.
+
+*Download [FileZilla](https://filezilla-project.org/download.php?type=client)*
+
+Open FileZilla en voer de gegevens in die je had teruggevonden in de vorige stappen.
+Host: IP-adres
+Gebruikersnaam: pi
+Wachtwoord: raspberry
+Poort: 22
+Klik op 'Snelverbinden' om een verbinding te maken.
 
 ---
 
