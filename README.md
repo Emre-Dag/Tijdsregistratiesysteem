@@ -74,14 +74,17 @@ Each time you want to log back in with Putty, you need to repeat these steps.
 If you are successfully logged in, your terminal will look like this:
 
 ![image](https://user-images.githubusercontent.com/79916493/212494664-db53baee-d1e4-4bad-ac42-0b66b8613d7b.png)
+
 *Login data for illustration purposes, do not copy.*
 
 Installing libraries to run the code:
 Copy and paste (right mouse button) into the Putty terminal to install the following.
 
-•	sudo pip3 install adafruit-circuitpython-pn532
-•	sudo pip3 install mysql-connector-python
-•	sudo pip3 install adafruit-blinka
+- sudo pip3 install adafruit-circuitpython-pn532
+
+- sudo pip3 install mysql-connector-python
+
+- sudo pip3 install adafruit-blinka
 
 ---
 
@@ -118,6 +121,9 @@ Finally, it is also possible to view student registrations and filter certain da
 phpMyAdmin is een gratis en open-source webgebaseerde tool geschreven in PHP die wordt gebruikt om MySQL en MariaDB databases te beheren en administreren. Het biedt een gebruiksvriendelijke webinterface om met databases te communiceren, waarmee gebruikers verschillende taken kunnen uitvoeren zoals het maken, wijzigen en verwijderen van databases en tabellen, beheren van gebruikers , SQL-queries uitvoeren en meer.
 In the project there are 2 tables used as database. One is used purely for keeping track of students' time and the other for keeping track of all the students with their information.
 Both tables use the following information. A general ID, this is nothing special and is just a counter when a new line comes in. The NFC ID is the Uid (unique identifier) of the NFC tag. This is followed by the student's general information such as first name, last name and the class the student is in. Only in the database that keeps track of students' time records is also a column with the time + date attached.
+
+---
+
 #### 4. PN532 <a name="4"></a>
 What is NFC?
 NFC, or Near Field Communication, is a technology standard that is based on the principles of Radio Frequency Identification (RFID). It enables the wireless transmission of information over short distances, allowing for a more efficient and convenient exchange of information. This technology has become increasingly popular among consumers worldwide, as it simplifies transactions, digital content exchange, and electronic device connectivity with a simple touch. Furthermore, the technology is compatible with the vast majority of contactless cards and readers currently in use worldwide.
