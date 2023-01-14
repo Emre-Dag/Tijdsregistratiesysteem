@@ -98,34 +98,34 @@ Copy and paste (right mouse button) into the Putty terminal to install the follo
 
 ---
 
-Om de code te transporteren op de Raspberry Pi hebben we vervolgens een FTP-client nodig. En als laatste een SSH-client om commando's uit te voeren op de Raspberry Pi. Deze had je in het begin moeten installeren.
+Next, to transport the code on the Raspberry Pi, we need an FTP client. And finally an SSH client to execute commands on the Raspberry Pi. You should have installed these at the beginning.
 
-Download als eerst de volledige repository.
+First, download the full repository.
 
 ![MicrosoftTeams-image](https://user-images.githubusercontent.com/79916493/212497655-c7b27233-16d1-4b0e-8a11-f27185eb76c0.png)
 
 
 *Download [FileZilla](https://filezilla-project.org/download.php?type=client)*
 
-Open FileZilla en voer de gegevens in die je had teruggevonden in de vorige stappen.
+Open FileZilla and enter the data you had retrieved in the previous steps.
 
 Host: IP-adres
 
-Gebruikersnaam: pi
+Username: pi
 
-Wachtwoord: raspberry
+Password: raspberry
 
-Poort: 22
+Port: 22
 
-Klik op 'Snelverbinden' om een verbinding te maken.
+Click 'Snelverbinden' to make a connection.
 
 ![tempsnip](https://user-images.githubusercontent.com/79916493/212497405-83cdc9a2-b6ce-4aa9-ba75-92b23529c712.png)
 
-*Links zie je de werkomgeving van je pc en rechts die van de Raspberry Pi. Nu kan er bestanden uitgewisseld worden tussen deze 2 apparaten.*
+*On the left you see the working environment of your PC and on the right you see that of the Raspberry Pi. Now files can be exchanged between these 2 devices.*
 
-Selecteer links de repository die gedownload is en sleep de de code (RPI_master.py) rechts in het mapje Desktop.
+On the left, select the repository that was downloaded and drag the code (RPI_master.py) on the right into the Desktop folder.
 
-Onderstaande commando's om de code te runnen.
+Commands below to run the code.
 
 ![image](https://user-images.githubusercontent.com/79916493/212497788-cd8056ea-5394-46ce-8456-73bfa622d8ff.png)
 
@@ -133,7 +133,7 @@ Onderstaande commando's om de code te runnen.
 ---
  
 #### 2. Database <a name="2"></a>
-phpMyAdmin is een gratis en open-source webgebaseerde tool geschreven in PHP die wordt gebruikt om MySQL en MariaDB databases te beheren en administreren. Het biedt een gebruiksvriendelijke webinterface om met databases te communiceren, waarmee gebruikers verschillende taken kunnen uitvoeren zoals het maken, wijzigen en verwijderen van databases en tabellen, beheren van gebruikers , SQL-queries uitvoeren en meer.
+phpMyAdmin is a free and open-source web-based tool written in PHP used to manage and administer MySQL and MariaDB databases. It provides a user-friendly web interface to interact with databases, allowing users to perform various tasks such as creating, modifying and deleting databases and tables, managing users , running SQL queries and more.
 In the project there are 2 tables used as database. One is used purely for keeping track of students' time and the other for keeping track of all the students with their information.
 Both tables use the following information. A general ID, this is nothing special and is just a counter when a new line comes in. The NFC ID is the Uid (unique identifier) of the NFC tag. This is followed by the student's general information such as first name, last name and the class the student is in. Only in the database that keeps track of students' time records is also a column with the time + date attached.
 
