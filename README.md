@@ -43,38 +43,37 @@ After choosing your network, a window appears in the middle. Enter your network 
 Make sure the Raspberry Pi is connected to the network and note the assigned IP address by moving the cursor over the Wi-Fi icon. This will bring up a window with the IP address. Make sure that both the Raspberry Pi and your PC are connected to the same wifi network.
 
 ![image](https://user-images.githubusercontent.com/79916493/212494639-40bbff51-ea16-4650-b226-7e30f3fe2880.png)
+*possible IP-address: 169.154.146.220, do not take over.*
 
-Mogelijke IP-adres: 169.154.146.220, niet overnemen.
-
-Configureren Raspberry Pi
-Om SSH in te schakelen op de Raspberry Pi, ga je naar het menu bovenaan links en selecteer je "Preferences" en vervolgens "Raspberry Pi Configuration". In het tabblad "Interfaces" klik je vervolgens op "SSH" om het in te schakelen.
+To enable SSH on the Raspberry Pi, go to the menu at the top left and select "Preferences" and then "Raspberry Pi Configuration." In the "Interfaces" tab, then click on "SSH" to enable it. Also enable "SPI" since it will be used later.
 
 ![image](https://user-images.githubusercontent.com/79916493/212494652-a994224c-8bbf-4e99-b110-24e068bf60f1.png)
 
  
-Als volgende stap gaan we de benodigde bibliotheken downloaden en functionaliteiten activeren op de RPI via een specifiek .sh bestand, hiervoor zal Putty op je PC gebruikt worden. Wanneer Putty wordt geopend, zal het volgende scherm zich presenteren.
-PuTTY is een gratis en open-source seriële console en netwerkbestandsoverdracht applicatie. Het wordt veel gebruikt om op afstand toegang te krijgen tot servers, netwerkapparaten en andere uitrusting. Het is beschikbaar voor Windows, Linux en macOS.
+When Putty is opened, the following screen will present itself.
 
-Als je Putty op je computer opent, zul je worden begroet met een welkomsscherm:
+PuTTY is a free and open-source serial console and network file transfer application. It is widely used to remotely access servers, network devices and other equipment. It is available for Windows, Linux and macOS.
+
+When you open Putty on your computer, you will be greeted with a welcome screen:
 
 ![image](https://user-images.githubusercontent.com/79916493/212494657-e4f1334b-3232-4622-b91e-b584159f476d.png)
 
- 
-Om verbinding te maken met een Raspberry Pi via SSH, moet u het IP-adres van de Raspberry Pi invoeren bij de hostnaam. Zorg ervoor dat de PC en de Raspberry Pi zich op hetzelfde wifi-netwerk bevinden. Voer vervolgens poortnummer 22 in en selecteer SSH als het verbindingstype. Druk vervolgens op Open om de verbinding te openen.
+To connect to a Raspberry Pi via SSH, enter the Raspberry Pi's IP address in the hostname. Make sure the PC and the Raspberry Pi are on the same Wi-Fi network. Next, enter port number 22 and select SSH as the connection type. Next, press Open to open the connection.
 
 ![image](https://user-images.githubusercontent.com/79916493/212494661-c5a04aec-dc92-4a98-bf08-639ff6700a5e.png)
 
  
-Om in te loggen op de Raspberry Pi, gebruikt u de standaard inloggegevens van "pi" als gebruikersnaam en "raspberry" als wachtwoord. Als u een andere gebruikersnaam en wachtwoord heeft gekozen, gebruikt u deze in plaats daarvan.
-Elk keer wanneer u opnieuw wilt inloggen met Putty, moet u deze stappen herhalen.
-Als u succesvol bent ingelogd, zal uw terminal er als volgt uitzien:
+To log in to the Raspberry Pi, use the default login credentials of "pi" as the username and "raspberry" as the password. If you have chosen a different username and password, use them instead.
+Each time you want to log back in with Putty, you need to repeat these steps.
+
+If you are successfully logged in, your terminal will look like this:
 
 ![image](https://user-images.githubusercontent.com/79916493/212494664-db53baee-d1e4-4bad-ac42-0b66b8613d7b.png)
+*Login data for illustration purposes, do not copy.*
 
- 
-Inloggegevens ter illustratie, niet overnemen.
-Installeren van bibliotheken om de code te kunnen uitvoeren:
-Kopieer en plak (rechtmuisknop) in de Putty terminal om onderstaande te installeren.
+Installing libraries to run the code:
+Copy and paste (right mouse button) into the Putty terminal to install the following.
+
 •	sudo pip3 install adafruit-circuitpython-pn532
 •	sudo pip3 install mysql-connector-python
 •	sudo pip3 install adafruit-blinka
