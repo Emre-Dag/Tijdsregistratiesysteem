@@ -1,6 +1,6 @@
-# Tijdsregistratiesysteem
+# Time registration system
 
-**Handleiding gebruik website en Raspberry Pi.**
+**Manual use website and Raspberry Pi**
 
 * [Raspberry Pi](#1)
 * [Website](#2)
