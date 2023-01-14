@@ -238,7 +238,7 @@ This project has been finalized. All that needs to be done is to install the pro
 
 Presence worked on the project:
 - 7/10: 3h
-- naar kompas: 3h
+- went to Kompas school: 3h
 - 26/10: 3h
 - 28/10: 3h
 - 14/11: 3h
@@ -254,4 +254,3 @@ Presence worked on the project:
 - 13/01: 5h
 
 About +- 45 hours (2 days a week in corda 3 or 7)
-
