@@ -92,6 +92,11 @@ Copy and paste (right mouse button) into the Putty terminal to install the follo
 
 Om de code te transporteren op de Raspberry Pi hebben we vervolgens een FTP-client nodig. En als laatste een SSH-client om commando's uit te voeren op de Raspberry Pi. Deze had je in het begin moeten installeren.
 
+Download als eerst de volledige repository.
+
+![MicrosoftTeams-image](https://user-images.githubusercontent.com/79916493/212497655-c7b27233-16d1-4b0e-8a11-f27185eb76c0.png)
+
+
 *Download [FileZilla](https://filezilla-project.org/download.php?type=client)*
 
 Open FileZilla en voer de gegevens in die je had teruggevonden in de vorige stappen.
@@ -109,6 +114,8 @@ Klik op 'Snelverbinden' om een verbinding te maken.
 ![tempsnip](https://user-images.githubusercontent.com/79916493/212497405-83cdc9a2-b6ce-4aa9-ba75-92b23529c712.png)
 
 *Links zie je de werkomgeving van je pc en rechts die van de Raspberry Pi. Nu kan er bestanden uitgewisseld worden tussen deze 2 apparaten.*
+
+Selecteer links de repository die gedownload is en sleep de de code (RPI_master.py) rechts in het mapje Desktop.
 
 ---
  
