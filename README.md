@@ -6,8 +6,9 @@
 * [Website](#2)
 * [Database](#3)
 * [NFC (PN532)](#4)
+* [Conclusion](#5)
 
-#### 1. Uitleg rpi <a name="1"></a>
+#### 1. Raspberry Pi <a name="1"></a>
 Om een project te kunnen uitvoeren op een Raspberry Pi, moet het Raspberry Pi operating system geïnstalleerd worden op een SD-kaart van minstens 16GB. Deze SD-kaart mag volledig geformatteerd worden vooraleer eraan begonnen wordt. 
 Om dit te doen, moet je eerst de Raspberry Pi Imager (link in md zetten) installeren op je computer. Deze tool is een snelle en eenvoudige manier om het Raspberry Pi OS op een SD-kaart te installeren. 
 Steek de SD-kaart in je computer en open de Imager. Bij het openen van de Imager, zie je een welkomstscherm.
@@ -160,7 +161,7 @@ After all configurations have been imported both software-wise with all proper l
 
 
 
-
+#### 5. Conclusion <a name="5"></a>
 Conclusie: Wegens tijdgebrek hebben we deze projecten niet kunnen installeren. We kregen een te laat antwoord op de mail waarop we dachten om deze te installeren in de kerstvakantie.
 
 Tijden aanwezig gewerkt aan het project:
