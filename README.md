@@ -211,8 +211,8 @@ After all configurations have been imported both software-wise with all proper l
 
 #### 5. Link to projects <a name="5"></a>
 
-In volgende folders staan de bijhorende readmes en code.
-- [Algemene NFC code](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/NFC) -> used
+The following folders contain the corresponding readmes and code.
+- [General NFC code](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/NFC) -> used
 - [Website](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/Website) -> used
 - [Extra NFC code](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/extra_nfc) -> different option, but not used
 - [QR-code](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/qrcode) -> different option, but not used
@@ -232,7 +232,7 @@ In volgende folders staan de bijhorende readmes en code.
 ---
 
 #### 7. Conclusion <a name="7"></a>
-Due to lack of time, we have not been able to install this project. We received a late reply to the mail on which we thought to install them during the Christmas vacation.
+This project has been finalized. All that needs to be done is to install the project in the method school, but due to lack of time, we have not been able to install this project. We received a late reply to the mail on which we thought to install them during the Christmas vacation.
 
 ---
 
