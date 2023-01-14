@@ -133,7 +133,8 @@ Commands below to run the code.
 ---
  
 #### 2. Database <a name="2"></a>
-phpMyAdmin is a free and open-source web-based tool written in PHP used to manage and administer MySQL and MariaDB databases. It provides a user-friendly web interface to interact with databases, allowing users to perform various tasks such as creating, modifying and deleting databases and tables, managing users , running SQL queries and more.  
+phpMyAdmin is a free and open-source web-based tool written in PHP used to manage and administer MySQL and MariaDB databases. It provides a user-friendly web interface to interact with databases, allowing users to perform various tasks such as creating, modifying and deleting databases and tables, managing users , running SQL queries and more.    
+
 In the project there are 2 tables used as database. One is used purely for keeping track of students' time and the other for keeping track of all the students with their information.
 Both tables use the following information. A general ID, this is nothing special and is just a counter when a new line comes in. The NFC ID is the Uid (unique identifier) of the NFC tag. This is followed by the student's general information such as first name, last name and the class the student is in. Only in the database that keeps track of students' time records is also a column with the time + date attached.
 
