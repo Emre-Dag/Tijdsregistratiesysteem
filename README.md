@@ -155,7 +155,7 @@ After all configurations have been imported both software-wise with all proper l
 #### 6. Conclusion <a name="6"></a>
 Conclusie: Wegens tijdgebrek hebben we deze projecten niet kunnen installeren. We kregen een te laat antwoord op de mail waarop we dachten om deze te installeren in de kerstvakantie.
 
---
+---
 
 Tijden aanwezig gewerkt aan het project:
 - 7/10: 3uur
