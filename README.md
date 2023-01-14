@@ -6,7 +6,8 @@
 * [Website](#2)
 * [Database](#3)
 * [NFC (PN532)](#4)
-* [Conclusion](#5)
+* [Possible extensions](#5)
+* [Conclusion](#6)
 
 #### 1. Raspberry Pi <a name="1"></a>
 Om een project te kunnen uitvoeren op een Raspberry Pi, moet het Raspberry Pi operating system geïnstalleerd worden op een SD-kaart van minstens 16GB. Deze SD-kaart mag volledig geformatteerd worden vooraleer eraan begonnen wordt. 
@@ -21,6 +22,7 @@ De Raspberry Pi is nu klaargemaakt, maar moet nog geconfigureerd worden.
 
 Raspberry Pi verbinden met wifi
 Sluit de Raspberry Pi aan en wacht tot deze is ingeschakeld.
+
 Startscherm:
 
 ![image](https://user-images.githubusercontent.com/79916493/212494614-df387db6-3c75-4315-9492-5c45c7201bfb.png)
@@ -77,8 +79,7 @@ Kopieer en plak (rechtmuisknop) in de Putty terminal om onderstaande te installe
 
 
 #### 2. Website <a name="2"></a>
-    // algemene uitleg van functionaliteiten
-    // instructies: hoe eraan geraken, services voor user uitleggen
+
 The website serves as a dashboard for modifying the database and is currently hosted on a PXL server owned by the student. However, it will need to be moved to a paid server in the future.
 On the website, there are several functions that allow for manipulation of the ”studenten_default” database. One of these functions is the ability to add new students to the database.
 
@@ -146,23 +147,15 @@ It is of importance to properly designate the appropriate communication protocol
 
  
 After all configurations have been imported both software-wise with all proper libraries and hardware configurations with proper wiring and proper communication protocol chosen, the suitable code can be executed.
-// extra chips bijbestellen? website geven als voorbeeld
 
 
-// apart file voor code uitleg (meerdere files van ieder py file: nfc, qr, extra van nikita)
-
-//// punten opschrijven die nog gedaan (future) worden
-
-// videos?
+#### 5. Possible extensions <a name="5"></a>
 
 
-
-
-
-
-
-#### 5. Conclusion <a name="5"></a>
+#### 6. Conclusion <a name="6"></a>
 Conclusie: Wegens tijdgebrek hebben we deze projecten niet kunnen installeren. We kregen een te laat antwoord op de mail waarop we dachten om deze te installeren in de kerstvakantie.
+
+--
 
 Tijden aanwezig gewerkt aan het project:
 - 7/10: 3uur
