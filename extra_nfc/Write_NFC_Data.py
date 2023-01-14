@@ -1,5 +1,5 @@
-# Requires Adafruit_Python_PN532
-
+# Requires Adafruit_Python_PN532_SPI
+# Additional import 
 import binascii
 import sys
 import struct
@@ -7,16 +7,9 @@ import struct
 import board
 import busio
 from adafruit_pn532.adafruit_pn532 import MIFARE_CMD_AUTH_B
-
-
-# Additional import needed for I2C/SPI
 from digitalio import DigitalInOut
-#
-# NOTE: pick the import that matches the interface being used
-
 from adafruit_pn532.spi import PN532_SPI
-# Hack to make code compatible with both Python 2 and 3 (since 3 moved
-# raw_input from a builtin to a different function, ugh).
+
 try:
     input = raw_input
 except NameError:
@@ -67,10 +60,6 @@ while block_choice is None:
     except ValueError:
         print('Error! Unrecognized option.')
         continue
-    # Decimal value not greater than hex number with 6 digits
-    #if not (0 <= block_choice < 16777215):
-    #    print('Error! User ID must be within 0 to 4294967295.')
-    #    continue
     print('')
 print('You chose the block type: {0}'.format(block_choice))
 print('')
