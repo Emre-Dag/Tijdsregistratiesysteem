@@ -3,9 +3,9 @@
 import cv2
 import webbrowser
 import time
-# Create a VideoCapture object and read from input file
-# If the input is the camera, pass 0 instead of the video file name
+# Create a VideoCapture object
 cam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+#creates a QRCodeDetector object, which is used to detect and decode QR codes in images.
 detector = cv2.QRCodeDetector()
 # Check if camera opened successfully
 if (cam.isOpened() == False):
@@ -19,6 +19,7 @@ while(cam.isOpened()):
     # check if there is a QRCode in the image
     if data:
        print(bbox,data)
+       #Open QR in web browser
        webbrowser.open(str(data))
        time.sleep(5)
        #break
