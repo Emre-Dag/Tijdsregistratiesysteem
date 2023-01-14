@@ -14,7 +14,7 @@
 
 #### 1. Raspberry Pi <a name="1"></a>
 To run a project on a Raspberry Pi, the Raspberry Pi operating system must be installed on an SD card of at least 16GB. This SD card may be fully formatted before starting. 
-To do this, you must first install the Raspberry Pi Imager (put link in md) on your computer. This tool is a quick and easy way to install the Raspberry Pi OS on an SD card. 
+To do this, you must first install the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on your computer. This tool is a quick and easy way to install the Raspberry Pi OS on an SD card. 
 Insert the SD card into your computer and open the Imager. Upon opening the Imager, you will see a welcome screen.
 
 ![image](https://user-images.githubusercontent.com/79916493/212494599-78593b8f-7f71-4e07-ac3d-df20608baf87.png)
