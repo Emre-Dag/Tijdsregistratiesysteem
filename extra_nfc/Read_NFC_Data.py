@@ -1,5 +1,5 @@
-# Requires Adafruit_Python_PN532
-
+# Requires Adafruit_Python_PN532_SPI
+# Additional import 
 import binascii
 import socket
 import time
@@ -10,10 +10,6 @@ import board
 import busio
 from digitalio import DigitalInOut
 from adafruit_pn532.adafruit_pn532 import MIFARE_CMD_AUTH_B
-#
-# NOTE: pick the import that matches the interface being used
-#
-# from adafruit_pn532.i2c import PN532_I2C
 from adafruit_pn532.spi import PN532_SPI
 
 try:
@@ -21,16 +17,11 @@ try:
 except NameError:
     pass
 
-# PN532 configuration for a Raspberry Pi GPIO:
-
 # SPI connection:
 spi = busio.SPI(board.SCK, board.MOSI, board.MISO)
 cs_pin = DigitalInOut(board.D5)
 pn532 = PN532_SPI(spi, cs_pin, debug=False)
 
-# UART connection
-# uart = busio.UART(board.TX, board.RX, baudrate=115200, timeout=100)
-# pn532 = PN532_UART(uart, debug=False)
 
 ic, ver, rev, support = pn532.firmware_version
 print("Found PN532 with firmware version: {0}.{1}".format(ver, rev))
@@ -38,6 +29,7 @@ print("Found PN532 with firmware version: {0}.{1}".format(ver, rev))
 # need to change this from the default below unless you know your card has a
 # different key associated with it.
 CARD_KEY = b"\xFF\xFF\xFF\xFF\xFF\xFF"
+
 # Number of seconds to delay after reading data.
 DELAY = 0.5
 
@@ -49,7 +41,7 @@ def close(signal, frame):
 
 signal.signal(signal.SIGINT, close)
 
-# Create and initialize an instance of the PN532 class
+# Configure PN532 to communicate with MiFare cards
 pn532.SAM_configuration()
 
 print('PN532 NFC RFID 13.56MHz Card Reader')
@@ -86,5 +78,4 @@ while True:
     print("hex number: ",h)    
     print("int number: ",i)
     print("string: ",s)
-    #print('User Id: {0}'.format(float(data[2:8]).decode("utf-8"), 16))
     time.sleep(DELAY)
