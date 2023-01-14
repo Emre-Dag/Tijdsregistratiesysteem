@@ -11,7 +11,7 @@
     WHERE NFC_ID = ".$_GET['NFCID']."";
 	if ($conn->query($sql) === TRUE) 
 	{
-		//echo "New record created successfully.";
+		echo "Student deleted.";
 	} 
 	else 
 	{

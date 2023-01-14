@@ -11,7 +11,7 @@
     ACHTERNAAM = '".$_GET['Achternaam']."' AND KLAS = '".$_GET['Klas']."'";
 	if ($conn->query($sql) === TRUE) 
 	{
-		//echo "New record created successfully.";
+		echo "Update successfully.";
 	} 
 	else 
 	{

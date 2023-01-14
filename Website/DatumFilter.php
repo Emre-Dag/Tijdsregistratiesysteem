@@ -77,7 +77,7 @@
         $result = $conn->query($sql);
         if ($result->num_rows > 0) 
         {
-            echo "<table><tr><th>ID</th><th>NFC_ID</th><th>KLAS</th><th>VOORNAAM</th><th>ACTERNAAM</th><th>TIJD</th></tr>";
+            echo "<table><tr><th>ID</th><th>NFC_ID</th><th>KLAS</th><th>VOORNAAM</th><th>ACHTERNAAM</th><th>TIJD</th></tr>";
             // output data of each row
             while($row = $result->fetch_assoc()) 
             {

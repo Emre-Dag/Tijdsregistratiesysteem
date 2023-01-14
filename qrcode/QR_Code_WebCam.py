@@ -19,7 +19,7 @@ while(cam.isOpened()):
     # check if there is a QRCode in the image
     if data:
        print(bbox,data)
-       #webbrowser.open(str(data))
+       webbrowser.open(str(data))
        time.sleep(5)
        #break
     cv2.imshow('QR CODE scanner', frame)

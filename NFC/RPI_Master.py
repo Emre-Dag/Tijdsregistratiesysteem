@@ -64,7 +64,7 @@ while True:
 
         print(mylist)
         print(out_int)
-        mycursor.execute("INSERT INTO studenten (NFC_ID) VALUES ({})".format(out_int))
+        mycursor.execute("INSERT INTO studenten (KLAS,VOORNAAM,ACHTERNAAM,NFC_ID, TIJD) SELECT KLAS,VOORNAAM,ACHTERNAAM,NFC_ID,NOW() FROM studenten_default WHERE NFC_ID =({})".format(out_int))
         mydb.commit()
         print("data verstuurd!!!!!!!!!!!")
         GPIO.output(4, GPIO.HIGH)

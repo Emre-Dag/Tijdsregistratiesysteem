@@ -11,7 +11,7 @@
     ACHTERNAAM = '".$_GET['Achternaam']."',KLAS = '".$_GET['Klas']."' WHERE NFC_ID = ".$_GET['NFCID']."";
 	if ($conn->query($sql) === TRUE) 
 	{
-		//echo "New record created successfully.";
+		echo "Update successfully.";
 	} 
 	else 
 	{
