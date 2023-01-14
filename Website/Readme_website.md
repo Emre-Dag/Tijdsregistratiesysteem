@@ -1,6 +1,7 @@
 ## Website
 
 This section shows all the applications of the website by means of a video.
+This code was used for "Het Kompas" project.
 - Explanation NFC timekeeping system (website + database)
 - Removing a student. 
 - Modifying data of a student by Uid (e.g.: student moves to the next year).
