@@ -211,10 +211,10 @@ After all configurations have been imported both software-wise with all proper l
 #### 5. Link to projects <a name="5"></a>
 
 In volgende folders staan de bijhorende readmes en code.
-- [Algemene NFC code](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/NFC)
-- [Website](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/Website)
-- [Extra NFC code](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/extra_nfc)
-- [QR-code](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/qrcode)
+- [Algemene NFC code](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/NFC) -> used
+- [Website](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/Website) -> used
+- [Extra NFC code](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/extra_nfc) -> different option, but not used
+- [QR-code](https://github.com/Emre-Dag/Tijdsregistratiesysteem/tree/main/qrcode) -> different option, but not used
 
 ---
 
